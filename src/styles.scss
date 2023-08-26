@@ -1,0 +1,136 @@
+@mixin laptop{
+    @media screen and (max-width:1190px) {
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media screen and (max-width:980px) {
+        @content;
+    }
+}
+
+
+@mixin mobile{
+    @media screen and (max-width:412px) {
+        @content;
+    }
+}
+// STYLES STARTS HERE.......................>
+$color1:black;
+$color2:#464646;
+$color3:white;
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+html{
+    font-size: 62.5%;
+}
+.app{
+    max-width: 1440px;
+    padding: 0 10rem;
+    margin: auto;
+    @include laptop(){
+        padding: 0 5rem;
+    }
+    nav{
+        margin-top: 7.2rem;
+        display: flex;
+        border: 1px solid red;
+        align-items: center;
+        justify-content: space-between;
+        .nav__logo{
+            // flex: 5;
+        }
+        .nav__menu{
+            // flex: 7;
+            display: flex;
+            align-items: center;
+            gap:7.5rem;
+            @include tablet(){
+                gap:2.5rem;
+            }
+            // border: 1px solid green;
+            ul{
+                display: flex;
+                list-style-type: none;
+                @include tablet() {
+                    display:none;
+                }
+                li{
+                    padding: 1.2rem 3.2rem;
+                    font-size: 1.6rem;
+                    a{  white-space: nowrap;
+                        position: relative;
+                        &::after{
+                            content: '';
+                            width: 100%;
+                            height: 0.25rem;
+                            left: 0;
+                            bottom: -0.8rem;
+                            position: absolute;  
+                            background-color: $color1;  
+                        }
+                    }
+                }
+             
+            }
+            .nav__menu--icon{
+                font-size: 1.6rem;
+                display: none;
+                @include tablet(){
+                    display: block;
+                }
+            }
+            button{
+                padding: 1.2rem 3.2rem;
+                border: none;
+                border-radius: 0.4rem;
+                background-color:$color2;
+                color: $color3;
+            }
+        }
+    }
+
+    .heroSection{
+        max-width: 94.2rem;
+        margin: auto;
+        margin-top: 13.9rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        h1{
+        font-size: 5.6rem;
+        font-weight: 600;
+        text-align: center;
+        }
+        p{
+            margin-top: 2.4rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        button{
+            margin-top: 3.2rem;
+            padding: 1.2rem 3.2rem;
+            border: none;
+            border-radius: 0.4rem;
+            background-color:$color2;
+            color: $color3;
+        }
+
+    }
+}
+
+
+
+
+
+
+
