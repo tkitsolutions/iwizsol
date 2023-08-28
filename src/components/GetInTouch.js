@@ -2,7 +2,7 @@ import React from "react";
 
 const GetInTouch = () => {
   return (
-    <div className="getintouchContainer">
+    <div className="getintouchContainer" id="getintouch">
       <div className="getintouch">
         <h1>
           Let's <span>Connect!</span>

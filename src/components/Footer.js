@@ -54,9 +54,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="footerbar">
-        &#169; 2023 - TKIT SOL | All rights reserved
-      </div>
     </div>
   );
 };

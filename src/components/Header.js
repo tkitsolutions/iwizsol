@@ -5,8 +5,8 @@ import Hero from './Hero'
 const Header = () => {
   return (
     <div className='headerContainer'>
-        <header>
-        <Navbar/>
+        <header id='home'>
+        {/* <Navbar/> */}
         <Hero/>
         </header>
     </div>

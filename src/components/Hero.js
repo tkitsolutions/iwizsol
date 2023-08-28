@@ -8,23 +8,13 @@ import arrow from "../assets/Arrow.svg"
 const Hero = () => {
   return (
     <section className="heroSection">
-      <div className="heroContent">
-      <h1>Molding Bytes and Bits, Sculpting Digital Realities</h1>
+      <h1>Molding <span>Bytes</span> and <span>Bits</span>, Sculpting Digital Realities</h1>
       <p>
         Empowering Innovation: Your trusted partner for high-quality PCB
         manufacturing, expert microcontroller programming, and cutting-edge IoT
         gadget development.
       </p>
-      <button>Contact Us <img src={arrow}/></button>
-      </div>
-      <div className="heroImg">
-        <img src={heroImg} className='personImg'  about="IMG NOT FOUND"/>
-        <img src={iotImg} className='iotImg' about="IMG NOT FOUND"/>
-        <img src={webImg} className='webImg'  about="IMG NOT FOUND"/>
-        <img src={ucImg}  className='ucImg'  about="IMG NOT FOUND"/>
-
-        
-      </div>
+      <button onClick={()=>{document.getElementById('getintouch').scrollIntoView({behavior:"smooth"})}}>Subscribe<img src={arrow}/></button>
     </section>
   );
 };
